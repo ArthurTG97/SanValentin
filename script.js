@@ -52,7 +52,7 @@ celebrateBtn.addEventListener("click", () => {
   title.textContent = "Te Quiero Mucho ❤️";
 
   // Cambiar imagen
-  image.src = "cat-love.gif"; // pon aquí tu nueva imagen
+  image.src = "basill-love.png"; // pon aquí tu nueva imagen
 
   // Animar desaparición de botones
   buttonContainer.classList.add("fade-out");
@@ -65,10 +65,21 @@ celebrateBtn.addEventListener("click", () => {
   setTimeout(() => {
   const overlay = document.getElementById("letterOverlay");
   const letterText = document.getElementById("letterText");
+  const icon = document.getElementById("letterIcon");
 
   overlay.classList.add("active");
-  typeLetter(letterMessage, letterText, 30);
-}, 2500);
+
+  // Mostrar icono primero
+  setTimeout(() => {
+    icon.classList.add("show");
+  }, 400);
+  
+  // Luego empezar a escribir
+  setTimeout(() => {
+    typeLetter(letterMessage, letterText, 30);
+  }, 900);
+
+  }, 2500);
 
 });
 
@@ -143,11 +154,11 @@ trickyBtn.addEventListener("click", () => {
   // Cambiar texto e imagen según intento
   if (trickCount === 1) {
     title.textContent = "¿Segur@? 😏";
-    image.src = "apollo_cry.png";
+    image.src = "basill-2.png";
   } 
   else if (trickCount === 2) {
     title.textContent = "Mmmm... piénsalo bien 😌";
-    image.src = "apollo_cry.png";
+    image.src = "Basill-3.png";
   } 
   else if (trickCount === 3) {
     title.textContent = "No tienes escapatoria 💘";
