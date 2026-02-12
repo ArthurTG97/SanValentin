@@ -254,6 +254,19 @@ button:hover {
   }
 }
 
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .buttons button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
 /* Responsive móvil */
 @media (max-width: 480px) {
   .board {
