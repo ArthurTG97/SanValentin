@@ -165,12 +165,16 @@ trickyBtn.addEventListener("click", () => {
     image.src = "apollo_cry.png";
   }
 
-  // Escalas progresivas
-  scaleYes += 0.3;
-  scaleNo -= 0.2;
+  if (window.innerWidth < 480) {
+  scaleYes = Math.min(scaleYes + 0.15, 1.4);  // máximo 1.4 en móvil
+  scaleNo = Math.max(scaleNo - 0.1, 0.6);     // mínimo 0.6
+} else {
+  scaleYes = Math.min(scaleYes + 0.3, 2);     // máximo 2 en desktop
+  scaleNo = Math.max(scaleNo - 0.2, 0.4);
+}
 
-  celebrateBtn.style.transform = `scale(${scaleYes})`;
-  trickyBtn.style.transform = `scale(${scaleNo})`;
+celebrateBtn.style.transform = `scale(${scaleYes})`;
+trickyBtn.style.transform = `scale(${scaleNo})`;
 
   // Desaparece después de 3 intentos
   if (trickCount >= 3) {
