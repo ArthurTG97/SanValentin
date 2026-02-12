@@ -213,6 +213,7 @@ body {
   gap: 15px;
   flex-wrap: wrap;
   transition: opacity 0.6s ease;
+  overflow: hidden;
 }
 
 /* Botones */
