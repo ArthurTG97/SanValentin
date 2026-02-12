@@ -4,6 +4,13 @@ const image = document.getElementById("mainImage");
 const buttonContainer = document.getElementById("buttonContainer");
 const trickyBtn = document.getElementById("trickyBtn");
 
+const letterMessage = `
+Desde que llegaste a mi vida, todo tiene un color distinto.
+Gracias por tu risa, tu paciencia y tu forma de mirar el mundo.
+Te quiero mucho, más de lo que las palabras pueden explicar.
+💖
+`;
+
 let trickCount = 0;
 let scaleYes = 1;
 let scaleNo = 1;
@@ -54,8 +61,39 @@ celebrateBtn.addEventListener("click", () => {
     buttonContainer.style.opacity = "0";
   buttonContainer.style.pointerEvents = "none"; 
   }, 600);
+
+  setTimeout(() => {
+  const overlay = document.getElementById("letterOverlay");
+  const letterText = document.getElementById("letterText");
+
+  overlay.classList.add("active");
+  typeLetter(letterMessage, letterText, 30);
+}, 2500);
+
 });
 
+document.getElementById("closeLetter").addEventListener("click", () => {
+  document.getElementById("letterOverlay").classList.remove("active");
+});
+
+function typeLetter(text, element, speed = 35) {
+  element.textContent = "";
+  let i = 0;
+
+  function typing() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(typing, speed);
+    } else {
+      // Cuando termina de escribir
+      const closeBtn = document.getElementById("closeLetter");
+      closeBtn.classList.add("show");
+    }
+  }
+
+  typing();
+}
 
 function createConfetti() {
   const colors = ["#ff2e82", "#ffd700", "#00e0ff", "#7cff00", "#ff6f00"];

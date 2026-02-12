@@ -118,6 +118,72 @@ body {
   letter-spacing: 1px;
 }
 
+.letter-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  z-index: 5;
+}
+
+.letter-box {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  transform: translateY(30px);
+  transition: transform 0.6s ease;
+}
+
+.letter-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.letter-overlay.active .letter-box {
+  transform: translateY(0);
+}
+
+.letter-box p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+#letterText::after {
+  content: "|";
+  animation: blink 1s infinite;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+#closeLetter {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px) scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#closeLetter.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
 
 /* Imagen */
 .main-image {
