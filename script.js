@@ -6,12 +6,10 @@ const trickyBtn = document.getElementById("trickyBtn");
 
 const letterMessage = `
 Hola piciosa :3
-Te escribo esta pequeña cartita con todo mi amor y que sepas que te quiero muchísimo :3
+Te escribo esta pequeña cartita con todo mi amor para que sepas que te quiero muchísimo :3
 Eres y serás siempre lo más importante para mí en esta vida :3 
 No puedo dejar de pensar en que pronto nos veremos OwO hay tantas cosas y lugares que visitar, comidas por probar :3 
-No olvides que siempre te tengo presente y siempre pienso en ti, te quiero muchísimo mi niña hermosa piciosa :3
-Perdón por no haberte regalado algo más :c pero nos convendrá ahorrar para cuando estés aquí uwu
-Te quiero mucho mi niña piciosa, a ti y al kokitos meon jsjs, te mando muchos muchos besitos uwu 💕
+No olvides que siempre te tengo presente y siempre pienso en ti, te quiero muchísimo mi niña hermosa piciosa, a ti y al kokitos meon jsjs, te mando muchos muchos besitos uwu 💕
 `;
 
 let trickCount = 0;
