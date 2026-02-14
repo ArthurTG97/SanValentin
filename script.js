@@ -5,10 +5,12 @@ const buttonContainer = document.getElementById("buttonContainer");
 const trickyBtn = document.getElementById("trickyBtn");
 
 const letterMessage = `
-Desde que llegaste a mi vida, todo tiene un color distinto.
-Gracias por tu risa, tu paciencia y tu forma de mirar el mundo.
-Te quiero mucho, más de lo que las palabras pueden explicar.
-💖
+Hola piciosa :3
+Te escribo esta pequeña cartita con todo mi amor, lamento no haber podido regalarte algo hoy en este día :c pero solo quiero darte este pequeño detallito y que sepas que te quiero muchisimo. Eres y serás siempre lo más importante para mí en esta vida :3 
+No puedo dejar de pensar en que pronto nos veremos OwO hay tantas cosas y lugares que visitar, comidas por probar :3 
+No olvides que siempre te tengo presente y siempre pienso en ti, te quiero muchísimo mi niña hermosa piciosa :3
+De nuevo, perdón por no haber podido regalarte algo más :c pero nos convendrá ahorrar para cuando estés aquí uwu
+Te quiero mucho mi niña piciosa, a ti y al kokitos meon jsjs, te mando muchos muchos besitos uwu 💕
 `;
 
 let trickCount = 0;
@@ -49,7 +51,7 @@ celebrateBtn.addEventListener("click", () => {
   createHeartBurst();
 
   // Cambiar texto
-  title.textContent = "Te Quiero Mucho ❤️";
+  title.textContent = "Te Quiero Mucho Piciosa OwO";
 
   // Cambiar imagen
   image.src = "basill-love.png"; // pon aquí tu nueva imagen
@@ -153,15 +155,15 @@ trickyBtn.addEventListener("click", () => {
 
   // Cambiar texto e imagen según intento
   if (trickCount === 1) {
-    title.textContent = "¿Segur@? 😏";
+    title.textContent = "Andile piciosa unu";
     image.src = "basill-2.png";
   } 
   else if (trickCount === 2) {
-    title.textContent = "Mmmm... piénsalo bien 😌";
+    title.textContent = "Si, Ok, entiendo";
     image.src = "Basill-3.png";
   } 
   else if (trickCount === 3) {
-    title.textContent = "No tienes escapatoria 💘";
+    title.textContent = "¡Por Favooor! :(";
     image.src = "apollo_cry.png";
   }
 
